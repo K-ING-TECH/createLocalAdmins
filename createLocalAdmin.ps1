@@ -2,7 +2,7 @@
 $userInAdmins = net localgroup administrators | Select-String -Pattern "testAdmin"
 
 if ($userInAdmins) {
-    # If user "blit-support" is already in the Administrators group, do nothing
+    # If user "testAdmin" is already in the Administrators group, do nothing
     Write-Output "User 'testAdmin' is already a member of the Administrators group. No action needed."
 } else {
     # If user "testAdmin" is not in the Administrators group, create the user and add to Administrators group
